@@ -1,8 +1,6 @@
 #include<stdio.h>
 
-
 void printff(char* l) ; 
-
 
 int main()
 {   
@@ -21,11 +19,11 @@ int main()
         {
             tam++ ; 
         }
-
+        
+        //shift right
         char c = frase[tam-1] ; 
         for(int i=tam-1 ; i > 0 ; i--)
         {
-            //L U C A S ===> S L U C A
             frase[i] = frase[i-1] ; 
         }
         frase[0] = c ; 
@@ -35,6 +33,7 @@ int main()
             frase[i] += 3;
         }
 
+        //letter to number
         for(int i=0 ; frase[i]!='\0' ; i++)
         {
             if(frase[i] >= 'a' && frase[i] <= 'j')
@@ -49,6 +48,7 @@ int main()
             }
         }
 
+        //to uppercase
         for(int i=tam/2 ; frase[i]!='\0' ; i++)
         {
             if(frase[i] >= 'a' && frase[i] <= 'z')
